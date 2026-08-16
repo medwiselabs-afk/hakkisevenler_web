@@ -14,7 +14,7 @@ export default function QuickDonateSection({ campaigns }: { campaigns: CampaignC
           </div>
 
           <div className="flex flex-col justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-soft sm:p-8 md:w-2/5">
-            <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
+            <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent-light text-accent">
               <Landmark size={22} />
             </span>
             <h2 className="font-display text-xl text-ink sm:text-2xl">Havale / EFT ile Bağış</h2>

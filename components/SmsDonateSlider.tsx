@@ -66,7 +66,7 @@ export default function SmsDonateSlider() {
               className="group relative flex w-[270px] flex-shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 sm:w-[300px]"
             >
               <div className="flex items-start justify-between p-6 pb-2">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-light text-primary transition-transform duration-300 group-hover:scale-110">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-light text-accent transition-transform duration-300 group-hover:scale-110">
                   <Heart size={26} />
                 </span>
                 <span className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-white shadow-sm">

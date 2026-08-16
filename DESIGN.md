@@ -1,17 +1,17 @@
 ---
 name: Hakkı Sevenler Uluslararası Yardım Derneği
-description: Restrained white/gray donation platform with a single teal accent, evidence over stats.
+description: Navy/red/rose donation platform matched to a real reference site, evidence over stats.
 colors:
-  ink: "#15191B"
+  ink: "#14213D"
   bg: "#FFFFFF"
-  sand: "#F2F4F5"
-  line: "#E3E7E9"
-  primary: "#0F766E"
-  primary-dark: "#115E59"
-  primary-light: "#CCFBF1"
-  accent: "#14B8A6"
-  accent-dark: "#0D9488"
-  accent-light: "#99F6E4"
+  sand: "#EEF3F8"
+  line: "#DCE3EC"
+  primary: "#1D3A5F"
+  primary-dark: "#0B1F39"
+  primary-light: "#E4EAF1"
+  accent: "#C22E30"
+  accent-dark: "#9E2528"
+  accent-light: "#FBE1E3"
 typography:
   display:
     fontFamily: "Fraunces, Iowan Old Style, Palatino Linotype, serif"
@@ -45,19 +45,21 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Transparent Ledger"**
+**Creative North Star: "The Institutional Ledger"**
 
-A charity donation platform that earns trust with evidence, not claims. The
-surface reads like a well-run institution's public ledger: white pages, a
-single restrained teal for action and confirmation, near-black type for
-authority, and a light-gray band whenever the page needs to change register
-(stats, alternating sections) without reaching for a second color.
+A charity donation platform that reads like a well-run institution's public
+record: navy authority, one decisive red for the single ask ("Bağış Yap"),
+and a soft rose for the small icon marks that dot trust and program cards.
+White pages, a light blue-gray band whenever the page needs to change
+register (stats, alternating sections), and nothing else competing for
+attention.
 
-This redesign replaced an earlier warm cream/forest-green/terracotta identity
-(evidence, not current state — see git history) with this restrained
-white/gray/teal world, at the explicit direction of a named reference site
-(`global-giving-heart.lovable.app`). The old world's structure (routes, data
-model, component boundaries) was preserved; only the visual language changed.
+This redesign replaced an earlier warm cream/forest-green/terracotta
+identity, and then a first (incorrect) all-teal pass, with this navy/red/
+rose world — matched by directly screenshotting and pixel-sampling the named
+reference site (`global-giving-heart.lovable.app`) rather than trusting a
+text-only description of it. The old world's structure (routes, data model,
+component boundaries) was preserved; only the visual language changed.
 
 Confirmed rejection: aggregate impact statistics ("18 countries", "31,638+
 families") are not this association's real figures and must never be
@@ -65,8 +67,11 @@ rendered as if they were — see PRODUCT.md Evidence on Hand. The stats
 section instead pulls live counts from the database.
 
 **Key Characteristics:**
-- One accent color (teal), used sparingly, never decoratively
-- White as the working background; gray (`sand`) only for register changes
+- Navy (`primary`) carries text emphasis, links, borders, and outline
+  buttons; red (`accent`) is reserved for the one primary action per view;
+  pale rose (`accent-light`) is only for small icon-chip backgrounds
+- White as the working background; blue-gray (`sand`) only for register
+  changes
 - Serif display (Fraunces) for headings, humanist sans (Inter) for body
 - Real photography, no icon-tile filler where a photo belongs
 - Numbers on screen are either live (from the database) or clearly marked
@@ -74,39 +79,46 @@ section instead pulls live counts from the database.
 
 ## Colors
 
-Restrained strategy: neutrals carry the page, one teal accent carries every
-call to action, confirmation, and small emphasis mark.
+Full-palette strategy (matched to the reference, not a from-scratch
+choice): navy is the dominant secondary hue (text emphasis, links, outline
+buttons), red is the single primary-action color, rose is a small tertiary
+accent for icon marks. Values were captured by pixel-sampling an actual
+screenshot of the reference site, not estimated from a text description.
 
 ### Primary
-- **Deep Teal** (`#0F766E`): links, icon fills on light chips, focus rings,
-  selection color, primary text accents (e.g. price/amount emphasis).
-- **Deep Teal Dark** (`#115E59`): hover/active state for primary text links,
-  darker chip backgrounds.
-- **Pale Teal** (`#CCFBF1`): icon-chip backgrounds (e.g. stat icons, trust
-  badges) — always paired with `primary`/`primary-dark` text, never on its
-  own as a large field.
+- **Deep Navy** (`#1D3A5F`): links, borders/focus rings, selection color,
+  outline-button text, nav underline, price/amount emphasis.
+- **Ink Navy** (`#0B1F39`): hover/active state for navy elements, and the
+  reference's own hero/dark-surface tone (not currently used as a large
+  fill on this site, reserved for a future dark section).
+- **Pale Navy** (`#E4EAF1`): reserved for navy-tinted chip backgrounds if a
+  future component needs a navy chip instead of a rose one.
 
 ### Secondary (accent)
-- **Bright Teal** (`#14B8A6`): solid CTA buttons ("Bağış Yap"), the one
-  color allowed to fill a large shape (a full button).
-- **Bright Teal Dark** (`#0D9488`): CTA hover/active state.
-- **Bright Teal Light** (`#99F6E4`): reserved for small success/positive
-  micro-accents; not currently used as a large fill.
+- **Signal Red** (`#C22E30`): solid CTA buttons ("Bağış Yap"), the *only*
+  color allowed to fill a large shape (a full button). Used once per view.
+- **Signal Red Dark** (`#9E2528`): CTA hover/active state.
+- **Pale Rose** (`#FBE1E3`): icon-chip backgrounds (stat icons, trust
+  badges, program cards) — always paired with `accent` icon color, never
+  on its own as a large field.
 
 ### Neutral
-- **Near-Black Ink** (`#15191B`): all body text, headings, icon strokes on
+- **Deep Navy Ink** (`#14213D`): all body text, headings, icon strokes on
   light surfaces. Also the footer's solid background (white text on ink).
 - **White** (`#FFFFFF`): the default page background and card surface.
-- **Cool Gray** (`#F2F4F5`, token `sand`): the alternate section background
-  used to separate registers (stats band, page intros, gallery bands).
-- **Hairline Gray** (`#E3E7E9`, token `line`): all borders — card edges,
-  dividers, input borders.
+- **Cool Blue-Gray** (`#EEF3F8`, token `sand`): the alternate section
+  background used to separate registers (stats band, page intros, gallery
+  bands) — matches the reference's light stat-section tone.
+- **Hairline Blue-Gray** (`#DCE3EC`, token `line`): all borders — card
+  edges, dividers, input borders.
 
 ### Named Rules
-**The One Accent Rule.** Only two teal values ever appear as a *fill*:
-`accent` on primary buttons and `primary-light`/`sand` on small chips. Every
-other teal use is text, border, or icon stroke. Introducing a second hue
-(the old design's orange) is a regression to the discarded world.
+**The One Red Rule.** Red (`accent`) fills at most one element per
+viewport — the primary "Bağış Yap" action. Every other emphasis need
+(links, borders, secondary buttons, big numbers) is navy, never red.
+**The Rose-Is-Chip-Only Rule.** Pale rose (`accent-light` + `accent` icon)
+only appears inside a small circular icon chip. It never becomes a section
+background, a card border, or a button fill.
 
 ## Typography
 
@@ -145,8 +157,8 @@ hard offsets.
 ### Shadow Vocabulary
 - **soft** (`0 20px 60px -20px rgba(15,23,25,0.18)`): floating cards over a
   white/gray page (quick-donate widget).
-- **warm** (`0 20px 50px -18px rgba(15,118,110,0.35)`): teal-tinted glow
-  under CTA buttons and image banners.
+- **warm** (`0 20px 50px -18px rgba(194,46,48,0.35)`): red-tinted glow under
+  CTA buttons and image banners.
 
 ### Named Rules
 **The No Hard Shadow Rule.** Every shadow is soft and large-radius; a
@@ -190,14 +202,17 @@ no colored side-borders.
 ### Do:
 - **Do** keep every stat on screen either live (queried) or explicitly
   marked as a placeholder — see PRODUCT.md Evidence on Hand.
-- **Do** use `sand` (light gray), not a second hue, whenever a section
+- **Do** use `sand` (light blue-gray), not a second hue, whenever a section
   needs to visually separate from its neighbor.
-- **Do** keep buttons as filled teal pills; keep secondary actions as
-  outlined pills, never a second color.
+- **Do** keep the primary CTA as a filled red pill; keep secondary actions
+  as navy-outlined pills, never a second fill color.
+- **Do** keep icon chips rose (`accent-light` bg + `accent` icon); don't
+  recolor them navy even though navy is the dominant text color.
 
 ### Don't:
-- **Don't** reintroduce the discarded orange/terracotta accent or the
-  cream/forest-green palette; that identity was explicitly replaced.
+- **Don't** reintroduce the discarded cream/forest-green/terracotta palette
+  or the intermediate all-teal palette; both identities were explicitly
+  replaced after direct visual comparison with the reference site.
 - **Don't** invent aggregate impact numbers (countries served, families
   reached) anywhere on the site.
 - **Don't** add a kicker/eyebrow label above headings, or hard-offset

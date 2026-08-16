@@ -105,7 +105,7 @@ export default function QuickDonateWidget({ campaigns }: { campaigns: CampaignCa
           type="button"
           onClick={handleDonate}
           disabled={finalAmount <= 0}
-          className="focus-ring group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-primary py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark disabled:pointer-events-none disabled:opacity-50"
+          className="focus-ring group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-accent py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark disabled:pointer-events-none disabled:opacity-50"
         >
           <HandCoins size={16} className="transition-transform duration-300 group-hover:scale-110" />
           Bağış Yap

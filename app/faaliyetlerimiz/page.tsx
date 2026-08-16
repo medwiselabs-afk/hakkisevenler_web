@@ -69,7 +69,7 @@ export default function FaaliyetlerimizPage() {
                 href={href}
                 className="focus-ring group flex h-full flex-col gap-3 rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-light text-primary-dark">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-light text-accent">
                   <Icon size={20} />
                 </span>
                 <h3 className="font-display text-lg text-ink">{title}</h3>

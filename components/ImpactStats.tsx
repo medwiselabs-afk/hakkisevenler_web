@@ -47,8 +47,8 @@ export default async function ImpactStats() {
       <StaggerGroup className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-12 sm:gap-8 md:grid-cols-4 md:py-14">
         {stats.map(({ icon: Icon, value, suffix, label, format }) => (
           <StaggerItem key={label} className="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light">
-              <Icon size={18} className="text-primary-dark" />
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-light">
+              <Icon size={18} className="text-accent" />
             </span>
             <p className="font-display text-2xl font-semibold text-ink sm:text-3xl">
               <Counter value={value} suffix={suffix} format={format} />

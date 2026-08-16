@@ -95,7 +95,7 @@ export default function CampaignSlider({ campaigns }: { campaigns: CampaignCardD
                   </Link>
                   <Link
                     href={`/kampanyalar/${c.slug}`}
-                    className="focus-ring group inline-flex items-center gap-1.5 rounded-full bg-primary-dark px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-ink"
+                    className="focus-ring group inline-flex items-center gap-1.5 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark"
                   >
                     <HandHeart size={15} className="transition-transform duration-300 group-hover:scale-110" />
                     Bağış Yap
