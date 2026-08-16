@@ -5,19 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#14213D",
+        ink: "#132A35",
         bg: "#FFFFFF",
-        sand: "#EEF3F8",
-        line: "#DCE3EC",
+        sand: "#F3F8F9",
+        line: "#E1E9EA",
         primary: {
-          DEFAULT: "#1D3A5F",
-          dark: "#0B1F39",
-          light: "#E4EAF1",
+          DEFAULT: "#0D7377",
+          dark: "#0A5C5F",
+          light: "#DFF3F1",
         },
         accent: {
-          DEFAULT: "#C22E30",
-          dark: "#9E2528",
-          light: "#FBE1E3",
+          DEFAULT: "#0D7377",
+          dark: "#0A5C5F",
+          light: "#DFF3F1",
         },
       },
       fontFamily: {
@@ -34,12 +34,12 @@ const config: Config = {
       },
       backgroundImage: {
         "ledger-lines":
-          "repeating-linear-gradient(to bottom, transparent, transparent 39px, rgba(20,33,61,0.08) 40px)",
+          "repeating-linear-gradient(to bottom, transparent, transparent 39px, rgba(19,42,53,0.08) 40px)",
         "radial-fade": "radial-gradient(circle at center, black, transparent 75%)",
       },
       boxShadow: {
-        soft: "0 20px 60px -20px rgba(11, 31, 57, 0.2)",
-        warm: "0 20px 50px -18px rgba(194, 46, 48, 0.35)",
+        soft: "0 20px 60px -20px rgba(19, 42, 53, 0.2)",
+        warm: "0 20px 50px -18px rgba(13, 115, 119, 0.35)",
       },
       keyframes: {
         blob: {

@@ -1,17 +1,17 @@
 ---
 name: Hakkı Sevenler Uluslararası Yardım Derneği
-description: Navy/red/rose donation platform matched to a real reference site, evidence over stats.
+description: Teal-accented donation platform matched to a real reference site, evidence over stats.
 colors:
-  ink: "#14213D"
+  ink: "#132A35"
   bg: "#FFFFFF"
-  sand: "#EEF3F8"
-  line: "#DCE3EC"
-  primary: "#1D3A5F"
-  primary-dark: "#0B1F39"
-  primary-light: "#E4EAF1"
-  accent: "#C22E30"
-  accent-dark: "#9E2528"
-  accent-light: "#FBE1E3"
+  sand: "#F3F8F9"
+  line: "#E1E9EA"
+  primary: "#0D7377"
+  primary-dark: "#0A5C5F"
+  primary-light: "#DFF3F1"
+  accent: "#0D7377"
+  accent-dark: "#0A5C5F"
+  accent-light: "#DFF3F1"
 typography:
   display:
     fontFamily: "Fraunces, Iowan Old Style, Palatino Linotype, serif"
@@ -45,33 +45,36 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Institutional Ledger"**
+**Creative North Star: "The Transparent Ledger"**
 
 A charity donation platform that reads like a well-run institution's public
-record: navy authority, one decisive red for the single ask ("Bağış Yap"),
-and a soft rose for the small icon marks that dot trust and program cards.
-White pages, a light blue-gray band whenever the page needs to change
-register (stats, alternating sections), and nothing else competing for
-attention.
+ledger: white pages, deep navy-teal ink for authority, and exactly one
+accent — a deep teal — that carries every button, icon chip, link, and
+active state. Nothing else competes with it.
 
-This redesign replaced an earlier warm cream/forest-green/terracotta
-identity, and then a first (incorrect) all-teal pass, with this navy/red/
-rose world — matched by directly screenshotting and pixel-sampling the named
-reference site (`global-giving-heart.lovable.app`) rather than trusting a
-text-only description of it. The old world's structure (routes, data model,
-component boundaries) was preserved; only the visual language changed.
+This redesign went through three passes before landing here: an original
+warm cream/forest-green/terracotta identity, a first reskin toward the
+reference site based only on a text description of it (wrongly landed on a
+mixed navy/red/rose palette from a bad pixel sample), and this final pass —
+matched directly against a screenshot the user captured themselves from
+`global-giving-heart.lovable.app`. That screenshot is the authority; treat
+it over any earlier written description of "the reference," including
+inside this file's own history. The site's structure (routes, data model,
+component boundaries) was preserved throughout; only the visual language
+changed.
 
-Confirmed rejection: aggregate impact statistics ("18 countries", "31,638+
+Confirmed rejection: aggregate impact statistics ("18 countries", "41,783+
 families") are not this association's real figures and must never be
 rendered as if they were — see PRODUCT.md Evidence on Hand. The stats
 section instead pulls live counts from the database.
 
 **Key Characteristics:**
-- Navy (`primary`) carries text emphasis, links, borders, and outline
-  buttons; red (`accent`) is reserved for the one primary action per view;
-  pale rose (`accent-light`) is only for small icon-chip backgrounds
-- White as the working background; blue-gray (`sand`) only for register
-  changes
+- One accent color (deep teal), used for every button, icon chip, link,
+  and active nav state — never a second competing hue
+- White as the working background; cool blue-gray (`sand`) only for
+  register changes (stats band, alternating sections)
+- A dark teal top ticker (see Components → Top Ticker) is the one place
+  the accent fills a large surface
 - Serif display (Fraunces) for headings, humanist sans (Inter) for body
 - Real photography, no icon-tile filler where a photo belongs
 - Numbers on screen are either live (from the database) or clearly marked
@@ -79,46 +82,34 @@ section instead pulls live counts from the database.
 
 ## Colors
 
-Full-palette strategy (matched to the reference, not a from-scratch
-choice): navy is the dominant secondary hue (text emphasis, links, outline
-buttons), red is the single primary-action color, rose is a small tertiary
-accent for icon marks. Values were captured by pixel-sampling an actual
-screenshot of the reference site, not estimated from a text description.
+Restrained strategy: neutrals carry the page, one teal accent carries every
+call to action, confirmation, icon mark, and active state.
 
-### Primary
-- **Deep Navy** (`#1D3A5F`): links, borders/focus rings, selection color,
-  outline-button text, nav underline, price/amount emphasis.
-- **Ink Navy** (`#0B1F39`): hover/active state for navy elements, and the
-  reference's own hero/dark-surface tone (not currently used as a large
-  fill on this site, reserved for a future dark section).
-- **Pale Navy** (`#E4EAF1`): reserved for navy-tinted chip backgrounds if a
-  future component needs a navy chip instead of a rose one.
-
-### Secondary (accent)
-- **Signal Red** (`#C22E30`): solid CTA buttons ("Bağış Yap"), the *only*
-  color allowed to fill a large shape (a full button). Used once per view.
-- **Signal Red Dark** (`#9E2528`): CTA hover/active state.
-- **Pale Rose** (`#FBE1E3`): icon-chip backgrounds (stat icons, trust
-  badges, program cards) — always paired with `accent` icon color, never
-  on its own as a large field.
+### Primary / Accent
+`primary` and `accent` are the same teal family (kept as two token names
+for code-reuse reasons, not two hues).
+- **Deep Teal** (`#0D7377`): buttons, links, icon-chip icons, active nav
+  pill, focus ring, selection color.
+- **Deep Teal Dark** (`#0A5C5F`): hover/active state; also the top ticker's
+  solid background.
+- **Pale Teal** (`#DFF3F1`): icon-chip backgrounds, active nav-pill
+  background — always paired with `primary`/`accent` text or icon, never
+  a large field on its own.
 
 ### Neutral
-- **Deep Navy Ink** (`#14213D`): all body text, headings, icon strokes on
-  light surfaces. Also the footer's solid background (white text on ink).
+- **Deep Navy-Teal Ink** (`#132A35`): all body text and headings.
 - **White** (`#FFFFFF`): the default page background and card surface.
-- **Cool Blue-Gray** (`#EEF3F8`, token `sand`): the alternate section
+- **Cool Blue-Gray** (`#F3F8F9`, token `sand`): the alternate section
   background used to separate registers (stats band, page intros, gallery
-  bands) — matches the reference's light stat-section tone.
-- **Hairline Blue-Gray** (`#DCE3EC`, token `line`): all borders — card
+  bands).
+- **Hairline Blue-Gray** (`#E1E9EA`, token `line`): all borders — card
   edges, dividers, input borders.
 
 ### Named Rules
-**The One Red Rule.** Red (`accent`) fills at most one element per
-viewport — the primary "Bağış Yap" action. Every other emphasis need
-(links, borders, secondary buttons, big numbers) is navy, never red.
-**The Rose-Is-Chip-Only Rule.** Pale rose (`accent-light` + `accent` icon)
-only appears inside a small circular icon chip. It never becomes a section
-background, a card border, or a button fill.
+**The One Accent Rule.** Only one hue (teal) ever appears as emphasis —
+buttons, links, icon strokes, focus rings, the active nav pill, and the
+top ticker's solid fill. No second accent hue (no red, no rose, no orange)
+gets introduced for "variety."
 
 ## Typography
 
@@ -139,7 +130,8 @@ cover line with its body copy.
 - **Body** (400, `text-sm`–`text-base`, `text-ink/60` for secondary):
   paragraph copy, descriptions; secondary text always dims from `ink`,
   never switches to a plain gray.
-- **Label** (600, `text-xs`, tracked): category badges, step-number chips.
+- **Label** (600, `text-xs`, tracked): category badges, step-number chips,
+  the ticker's "Yaklaşan dini günler" tag.
 
 ## Layout
 
@@ -155,10 +147,10 @@ Flat by default; two soft, large-blur shadows carry emphasis instead of
 hard offsets.
 
 ### Shadow Vocabulary
-- **soft** (`0 20px 60px -20px rgba(15,23,25,0.18)`): floating cards over a
+- **soft** (`0 20px 60px -20px rgba(19,42,53,0.2)`): floating cards over a
   white/gray page (quick-donate widget).
-- **warm** (`0 20px 50px -18px rgba(194,46,48,0.35)`): red-tinted glow under
-  CTA buttons and image banners.
+- **warm** (`0 20px 50px -18px rgba(13,115,119,0.35)`): teal-tinted glow
+  under CTA buttons and image banners.
 
 ### Named Rules
 **The No Hard Shadow Rule.** Every shadow is soft and large-radius; a
@@ -181,8 +173,8 @@ no colored side-borders.
 
 ### Chips
 - **Category badge:** white/95 pill on card imagery, `text-primary-dark`.
-- **Icon chip:** circular, `bg-primary-light` fill with `text-primary-dark`
-  icon (stats, trust points, work-area cards).
+- **Icon chip:** circular, `bg-primary-light` (pale teal) fill with
+  `text-primary`/`text-accent` icon (stats, trust points, work-area cards).
 
 ### Cards / Containers
 - **Corner Style:** `rounded-2xl`.
@@ -193,9 +185,25 @@ no colored side-borders.
 - **Internal Padding:** `p-5`–`p-6`.
 
 ### Navigation
-- Sticky header, `bg-bg/70`→`bg-bg/90` blur on scroll. Links `text-ink/75`,
-  `hover:text-primary`, with an animated underline. Mobile collapses to a
-  slide-down panel behind a hamburger toggle.
+- Sticky header, `bg-bg/70`→`bg-bg/90` blur on scroll. The current page's
+  link gets a pale-teal pill background (`bg-primary-light text-primary-dark`);
+  other links are `text-ink/75`, `hover:text-primary`. Mobile collapses to a
+  slide-down panel behind a hamburger toggle. Logo carries a small gray
+  tagline ("Yurt içinde ve yurt dışında iyilik") under the wordmark on
+  `sm:` and up.
+
+### Top Ticker (signature component)
+- Solid `bg-primary-dark` strip, the site's only large teal fill, sitting
+  above everything else (before the header).
+- Left (desktop only): a pinned, non-scrolling "Yaklaşan dini günler" label
+  with a calendar icon, separated by a `border-white/15` divider.
+- Center: an auto-scrolling marquee (`animate-marquee`, the list duplicated
+  once for a seamless loop, paused on hover) of recurring Islamic-calendar
+  giving categories (Sadaka, Aşure Hayrı, Kurban & Adak Vekâleti, Mevlid
+  Kandili Bağışı, Kur'an-ı Kerim Hediyesi, Zekât & Fitre) — generic category
+  names, not fabricated statistics or dates.
+- Right: a pinned solid-white "Bağış Yap" pill (the one place a button uses
+  white-on-teal instead of teal-on-white).
 
 ## Do's and Don'ts
 
@@ -204,15 +212,16 @@ no colored side-borders.
   marked as a placeholder — see PRODUCT.md Evidence on Hand.
 - **Do** use `sand` (light blue-gray), not a second hue, whenever a section
   needs to visually separate from its neighbor.
-- **Do** keep the primary CTA as a filled red pill; keep secondary actions
-  as navy-outlined pills, never a second fill color.
-- **Do** keep icon chips rose (`accent-light` bg + `accent` icon); don't
-  recolor them navy even though navy is the dominant text color.
+- **Do** keep buttons, icon chips, links, and the active nav pill in the
+  same one teal family.
+- **Do** match a reference site by screenshotting and looking at it
+  directly before writing color tokens — a text-only description or a
+  single automated pixel sample is not reliable enough to commit to.
 
 ### Don't:
 - **Don't** reintroduce the discarded cream/forest-green/terracotta palette
-  or the intermediate all-teal palette; both identities were explicitly
-  replaced after direct visual comparison with the reference site.
+  or the intermediate navy/red/rose palette; both were explicitly replaced
+  after direct visual comparison with a real screenshot of the reference.
 - **Don't** invent aggregate impact numbers (countries served, families
   reached) anywhere on the site.
 - **Don't** add a kicker/eyebrow label above headings, or hard-offset

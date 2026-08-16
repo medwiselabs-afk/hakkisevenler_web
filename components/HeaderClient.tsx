@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const NAV = [
+  { href: "/", label: "Ana Sayfa" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/faaliyetlerimiz", label: "Faaliyetlerimiz" },
   { href: "/kampanyalar", label: "Kampanyalar" },
@@ -56,22 +57,31 @@ export default function HeaderClient({ loggedIn }: { loggedIn: boolean }) {
             priority
             className="h-10 w-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 sm:h-11 sm:w-11"
           />
-          <span className="font-display text-xl font-semibold tracking-tight text-primary-dark">
-            Hakkı Sevenler <span className="text-accent">Derneği</span>
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-xl font-semibold tracking-tight text-primary-dark">
+              Hakkı Sevenler <span className="text-accent">Derneği</span>
+            </span>
+            <span className="hidden text-xs text-ink/50 sm:block">
+              Yurt içinde ve yurt dışında iyilik
+            </span>
           </span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="focus-ring group relative rounded px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:text-primary"
-            >
-              {item.label}
-              <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 ease-out group-hover:scale-x-100" />
-            </Link>
-          ))}
+          {NAV.map((item) => {
+            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`focus-ring group relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                  active ? "bg-primary-light text-primary-dark" : "text-ink/75 hover:text-primary"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
