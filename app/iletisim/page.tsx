@@ -6,7 +6,7 @@ export default function ContactPage() {
       <div className="mt-6 space-y-2 text-sm text-ink/70">
         <p>Çağrı Merkezi: 0850 000 00 00</p>
         <p>E-posta: info@hakkisevenler.org.tr</p>
-        <p>Adres: Örnek Mah. Örnek Sk. No:1, İstanbul</p>
+        <p>Adres: Keçiören, Ankara (açık adres güncellenecek)</p>
       </div>
     </div>
   );

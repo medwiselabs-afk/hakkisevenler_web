@@ -7,27 +7,27 @@ import Reveal from "./motion/Reveal";
 
 const SMS_CAMPAIGNS = [
   {
-    code: "YARDIM",
-    title: "Acil Yardım",
-    desc: "Bir ailenin acil gıda ihtiyacına umut olmak için kodu yaz, kısa numaraya gönder.",
+    code: "HAFIZLIK",
+    title: "Hafızlık Kur'an Kursu",
+    desc: "Bir hafızın eğitim, barınma ve yemek ihtiyacına destek olmak için kodu yaz, kısa numaraya gönder.",
+    amount: 50,
+  },
+  {
+    code: "ASEVI",
+    title: "Aşevi",
+    desc: "İhtiyaç sahibi bir aileye bir kap sıcak yemek ulaştırmak için kodu gönder.",
+    amount: 50,
+  },
+  {
+    code: "GAZZE",
+    title: "Gazze Yardımı",
+    desc: "Gazze'de bir sofraya vesile olmak için kodu gönder.",
     amount: 50,
   },
   {
     code: "SUKUYUSU",
-    title: "Su Kuyusu",
-    desc: "Temiz suya erişimi olmayan bir köye kuyu açılmasına destek ol.",
-    amount: 50,
-  },
-  {
-    code: "EGITIM",
-    title: "Eğitim Bursu",
-    desc: "Bir öğrencinin eğitim masraflarına katkı sağlamak için kodu gönder.",
-    amount: 50,
-  },
-  {
-    code: "SAGLIK",
-    title: "Sağlık Desteği",
-    desc: "Bir hastanın tedavi masraflarına destek olmak için kodu gönder.",
+    title: "Afrika Su Kuyusu",
+    desc: "Nijerya'da temiz suya erişimi olmayan bir köye kuyu açılmasına destek ol.",
     amount: 50,
   },
 ];

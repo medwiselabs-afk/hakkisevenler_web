@@ -5,19 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#16211F",
-        bg: "#FBF9F4",
-        sand: "#EFE7D6",
-        line: "#DCD2B8",
+        ink: "#15191B",
+        bg: "#FFFFFF",
+        sand: "#F2F4F5",
+        line: "#E3E7E9",
         primary: {
-          DEFAULT: "#047857",
-          dark: "#065F46",
-          light: "#D1FAE5",
+          DEFAULT: "#0F766E",
+          dark: "#115E59",
+          light: "#CCFBF1",
         },
         accent: {
-          DEFAULT: "#C2410C",
-          dark: "#9A3412",
-          light: "#FFEDD5",
+          DEFAULT: "#14B8A6",
+          dark: "#0D9488",
+          light: "#99F6E4",
         },
       },
       fontFamily: {
@@ -38,8 +38,8 @@ const config: Config = {
         "radial-fade": "radial-gradient(circle at center, black, transparent 75%)",
       },
       boxShadow: {
-        soft: "0 20px 60px -20px rgba(15, 107, 92, 0.25)",
-        warm: "0 20px 50px -18px rgba(224, 147, 46, 0.35)",
+        soft: "0 20px 60px -20px rgba(15, 23, 25, 0.18)",
+        warm: "0 20px 50px -18px rgba(15, 118, 110, 0.35)",
       },
       keyframes: {
         blob: {

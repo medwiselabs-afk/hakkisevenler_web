@@ -8,11 +8,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const NAV = [
-  { href: "/hakkimizda", label: "Kurumsal" },
-  { href: "/kampanyalar", label: "Faaliyetler" },
-  { href: "/gundem", label: "Gündem" },
-  { href: "/sss", label: "Sık Sorulanlar" },
-  { href: "/hesaplarimiz", label: "Hesaplarımız" },
+  { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/faaliyetlerimiz", label: "Faaliyetlerimiz" },
+  { href: "/kampanyalar", label: "Kampanyalar" },
+  { href: "/kurban", label: "Kurban" },
   { href: "/iletisim", label: "İletişim" },
 ];
 
