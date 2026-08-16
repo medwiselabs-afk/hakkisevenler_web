@@ -59,21 +59,21 @@ export default function Footer() {
           <div>
             <p className="text-sm font-semibold text-white">Kurumsal</p>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><Link href="/hakkimizda" className="transition-colors hover:text-accent">Hakkımızda</Link></li>
-              <li><Link href="/gundem" className="transition-colors hover:text-accent">Gündem</Link></li>
-              <li><Link href="/sss" className="transition-colors hover:text-accent">Sık Sorulan Sorular</Link></li>
-              <li><Link href="/kvkk" className="transition-colors hover:text-accent">KVKK Metni</Link></li>
+              <li><Link href="/hakkimizda" className="transition-colors hover:text-primary-light">Hakkımızda</Link></li>
+              <li><Link href="/gundem" className="transition-colors hover:text-primary-light">Gündem</Link></li>
+              <li><Link href="/sss" className="transition-colors hover:text-primary-light">Sık Sorulan Sorular</Link></li>
+              <li><Link href="/kvkk" className="transition-colors hover:text-primary-light">KVKK Metni</Link></li>
             </ul>
           </div>
 
           <div>
             <p className="text-sm font-semibold text-white">Faaliyetler</p>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><Link href="/faaliyetlerimiz" className="transition-colors hover:text-accent">Faaliyetlerimiz</Link></li>
-              <li><Link href="/kurban" className="transition-colors hover:text-accent">Kurban Bağışı</Link></li>
-              <li><Link href="/kampanyalar?kategori=SU_KUYUSU" className="transition-colors hover:text-accent">Afrika Su Kuyusu</Link></li>
-              <li><Link href="/kampanyalar?kategori=EGITIM" className="transition-colors hover:text-accent">Hafızlık Kur'an Kursu</Link></li>
-              <li><Link href="/sevenler-davet" className="transition-colors hover:text-accent">Sevenler Davet</Link></li>
+              <li><Link href="/faaliyetlerimiz" className="transition-colors hover:text-primary-light">Faaliyetlerimiz</Link></li>
+              <li><Link href="/kurban" className="transition-colors hover:text-primary-light">Kurban Bağışı</Link></li>
+              <li><Link href="/kampanyalar?kategori=SU_KUYUSU" className="transition-colors hover:text-primary-light">Afrika Su Kuyusu</Link></li>
+              <li><Link href="/kampanyalar?kategori=EGITIM" className="transition-colors hover:text-primary-light">Hafızlık Kur'an Kursu</Link></li>
+              <li><Link href="/sevenler-davet" className="transition-colors hover:text-primary-light">Sevenler Davet</Link></li>
             </ul>
           </div>
 

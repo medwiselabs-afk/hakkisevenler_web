@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, HandHeart, Soup, Gift, UtensilsCrossed, BookOpen, Coins } from "lucide-react";
+import { CalendarDays, HandHeart, Soup, Gift, UtensilsCrossed, BookOpen, Coins, Droplets } from "lucide-react";
 
 const ITEMS = [
   { label: "Sadaka", icon: HandHeart, href: "/kampanyalar" },
@@ -8,6 +8,7 @@ const ITEMS = [
   { label: "Mevlid Kandili Bağışı", icon: UtensilsCrossed, href: "/kampanyalar" },
   { label: "Kur'an-ı Kerim Hediyesi", icon: BookOpen, href: "/faaliyetlerimiz" },
   { label: "Zekât & Fitre", icon: Coins, href: "/kampanyalar" },
+  { label: "Su Kuyusu", icon: Droplets, href: "/kampanyalar?kategori=SU_KUYUSU" },
 ];
 
 export default function TopTicker() {
@@ -35,7 +36,7 @@ export default function TopTicker() {
 
       <Link
         href="/kampanyalar"
-        className="focus-ring flex flex-shrink-0 items-center bg-white px-4 font-semibold text-primary-dark transition-colors hover:bg-white/90 sm:px-6"
+        className="focus-ring flex flex-shrink-0 items-center gap-1.5 bg-accent px-4 font-semibold text-white transition-colors hover:bg-accent-dark sm:px-6"
       >
         Bağış Yap
       </Link>

@@ -90,7 +90,7 @@ export default async function HomePage() {
               <StaggerItem key={n} className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
                 <span className="relative z-10 flex h-[72px] w-[72px] items-center justify-center rounded-full border border-primary/20 bg-white">
                   <Icon size={26} className="text-primary" />
-                  <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-accent font-mono text-xs font-bold text-white">
+                  <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary font-mono text-xs font-bold text-white">
                     {n}
                   </span>
                 </span>

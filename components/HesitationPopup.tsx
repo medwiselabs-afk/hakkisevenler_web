@@ -68,7 +68,7 @@ export default function HesitationPopup() {
               <X size={16} />
             </button>
 
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-light text-accent">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
               <ShieldCheck size={24} />
             </span>
 

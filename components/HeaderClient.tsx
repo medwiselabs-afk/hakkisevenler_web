@@ -59,7 +59,7 @@ export default function HeaderClient({ loggedIn }: { loggedIn: boolean }) {
           />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-xl font-semibold tracking-tight text-primary-dark">
-              Hakkı Sevenler <span className="text-accent">Derneği</span>
+              Hakkı Sevenler <span className="text-primary">Derneği</span>
             </span>
             <span className="hidden text-xs text-ink/50 sm:block">
               Yurt içinde ve yurt dışında iyilik

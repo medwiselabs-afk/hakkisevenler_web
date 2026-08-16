@@ -1,6 +1,6 @@
 ---
 name: Hakkı Sevenler Uluslararası Yardım Derneği
-description: Teal-accented donation platform matched to a real reference site, evidence over stats.
+description: Teal-surface/red-CTA donation platform matched to a real reference site, evidence over stats.
 colors:
   ink: "#132A35"
   bg: "#FFFFFF"
@@ -9,9 +9,9 @@ colors:
   primary: "#0D7377"
   primary-dark: "#0A5C5F"
   primary-light: "#DFF3F1"
-  accent: "#0D7377"
-  accent-dark: "#0A5C5F"
-  accent-light: "#DFF3F1"
+  accent: "#DC3B3E"
+  accent-dark: "#B32A2D"
+  accent-light: "#FBE1E1"
 typography:
   display:
     fontFamily: "Fraunces, Iowan Old Style, Palatino Linotype, serif"
@@ -48,20 +48,21 @@ components:
 **Creative North Star: "The Transparent Ledger"**
 
 A charity donation platform that reads like a well-run institution's public
-ledger: white pages, deep navy-teal ink for authority, and exactly one
-accent — a deep teal — that carries every button, icon chip, link, and
-active state. Nothing else competes with it.
+ledger: white pages, deep navy-teal ink for authority, teal as the
+structural surface color (top ticker, icon chips, links, active states),
+and one red reserved purely for the donation call to action. Nothing else
+competes with red; teal never fills a button.
 
-This redesign went through three passes before landing here: an original
-warm cream/forest-green/terracotta identity, a first reskin toward the
-reference site based only on a text description of it (wrongly landed on a
-mixed navy/red/rose palette from a bad pixel sample), and this final pass —
-matched directly against a screenshot the user captured themselves from
-`global-giving-heart.lovable.app`. That screenshot is the authority; treat
-it over any earlier written description of "the reference," including
-inside this file's own history. The site's structure (routes, data model,
-component boundaries) was preserved throughout; only the visual language
-changed.
+**The reference site is a live-edited Lovable preview, not a fixed
+artifact.** Across this redesign the same URL
+(`global-giving-heart.lovable.app`) has rendered at least three visibly
+different palettes when checked at different times (all-teal with no red;
+navy/red/rose; teal-surface with red CTAs). Each pass in this file's
+history matched the screenshot available at that moment in good faith —
+treat the *current* running site and DESIGN.md as authoritative, and expect
+that a future visit may show yet another state. If asked to re-match the
+reference again, get a fresh screenshot first rather than trusting this
+file's prior description of it.
 
 Confirmed rejection: aggregate impact statistics ("18 countries", "41,783+
 families") are not this association's real figures and must never be
@@ -69,12 +70,12 @@ rendered as if they were — see PRODUCT.md Evidence on Hand. The stats
 section instead pulls live counts from the database.
 
 **Key Characteristics:**
-- One accent color (deep teal), used for every button, icon chip, link,
-  and active nav state — never a second competing hue
+- Teal (`primary`) is the structural color: top ticker background, links,
+  icon-chip icons, active nav pill, focus ring
+- Red (`accent`) is reserved *only* for the "Bağış Yap" call-to-action
+  button — everywhere it appears, including inside the teal top ticker
 - White as the working background; cool blue-gray (`sand`) only for
   register changes (stats band, alternating sections)
-- A dark teal top ticker (see Components → Top Ticker) is the one place
-  the accent fills a large surface
 - Serif display (Fraunces) for headings, humanist sans (Inter) for body
 - Real photography, no icon-tile filler where a photo belongs
 - Numbers on screen are either live (from the database) or clearly marked
@@ -82,19 +83,24 @@ section instead pulls live counts from the database.
 
 ## Colors
 
-Restrained strategy: neutrals carry the page, one teal accent carries every
-call to action, confirmation, icon mark, and active state.
+Two-role strategy: teal is the surface/structural color, red is a single
+reserved action color used nowhere else.
 
-### Primary / Accent
-`primary` and `accent` are the same teal family (kept as two token names
-for code-reuse reasons, not two hues).
-- **Deep Teal** (`#0D7377`): buttons, links, icon-chip icons, active nav
-  pill, focus ring, selection color.
-- **Deep Teal Dark** (`#0A5C5F`): hover/active state; also the top ticker's
-  solid background.
+### Primary (teal)
+- **Deep Teal** (`#0D7377`): links, icon-chip icons, active nav pill,
+  focus ring, selection color, secondary/outline button borders+text.
+- **Deep Teal Dark** (`#0A5C5F`): hover/active state; also the top
+  ticker's solid background.
 - **Pale Teal** (`#DFF3F1`): icon-chip backgrounds, active nav-pill
-  background — always paired with `primary`/`accent` text or icon, never
-  a large field on its own.
+  background — always paired with `primary` text or icon, never a large
+  field on its own.
+
+### Accent (red — CTA only)
+- **Signal Red** (`#DC3B3E`): the "Bağış Yap" button fill, every time it
+  appears (header, ticker, hero, cards, forms). Nothing else is red.
+- **Signal Red Dark** (`#B32A2D`): CTA hover/active state.
+- **Pale Red** (`#FBE1E1`): reserved for a red-tinted chip if a future
+  component needs one; not currently used anywhere.
 
 ### Neutral
 - **Deep Navy-Teal Ink** (`#132A35`): all body text and headings.
@@ -106,10 +112,10 @@ for code-reuse reasons, not two hues).
   edges, dividers, input borders.
 
 ### Named Rules
-**The One Accent Rule.** Only one hue (teal) ever appears as emphasis —
-buttons, links, icon strokes, focus rings, the active nav pill, and the
-top ticker's solid fill. No second accent hue (no red, no rose, no orange)
-gets introduced for "variety."
+**The Red-Is-CTA-Only Rule.** Red fills exactly one kind of element: the
+"Bağış Yap" action button, wherever it appears. It never becomes a link
+color, an icon-chip tint, a border, or a section background. Every other
+emphasis need is teal.
 
 ## Typography
 

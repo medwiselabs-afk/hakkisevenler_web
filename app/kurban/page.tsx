@@ -60,7 +60,7 @@ export default async function KurbanPage() {
               key={title}
               className="flex flex-col items-center gap-3 rounded-2xl border border-line bg-white p-6 text-center"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-light text-accent">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-light text-primary">
                 <Icon size={20} />
               </span>
               <h3 className="font-display text-base text-ink">{title}</h3>

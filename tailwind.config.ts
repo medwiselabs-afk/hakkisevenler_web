@@ -15,9 +15,9 @@ const config: Config = {
           light: "#DFF3F1",
         },
         accent: {
-          DEFAULT: "#0D7377",
-          dark: "#0A5C5F",
-          light: "#DFF3F1",
+          DEFAULT: "#DC3B3E",
+          dark: "#B32A2D",
+          light: "#FBE1E1",
         },
       },
       fontFamily: {
@@ -39,7 +39,7 @@ const config: Config = {
       },
       boxShadow: {
         soft: "0 20px 60px -20px rgba(19, 42, 53, 0.2)",
-        warm: "0 20px 50px -18px rgba(13, 115, 119, 0.35)",
+        warm: "0 20px 50px -18px rgba(220, 59, 62, 0.35)",
       },
       keyframes: {
         blob: {

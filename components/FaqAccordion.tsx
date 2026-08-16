@@ -41,7 +41,7 @@ export default function FaqAccordion() {
               <motion.span
                 animate={{ rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-accent-light text-accent"
+                className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary-light text-primary"
               >
                 <Plus size={15} strokeWidth={2.5} />
               </motion.span>
