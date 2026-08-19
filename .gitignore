@@ -9,3 +9,6 @@ out
 *.db-wal
 dev.db
 next-env.d.ts
+public/uploads/*
+!public/uploads/.gitkeep
+*.tsbuildinfo

@@ -27,21 +27,21 @@ export default function FaqAccordion() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+    <div className="divide-y divide-line overflow-hidden rounded-2xl border border-line/50 bg-white shadow-soft">
       {FAQS.map((item, i) => {
         const isOpen = open === i;
         return (
           <div key={i}>
             <button
               onClick={() => setOpen(isOpen ? null : i)}
-              className="focus-ring flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-sand/40"
+              className="focus-ring flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-all hover:bg-gradient-subtle"
               aria-expanded={isOpen}
             >
               <span className="font-medium text-ink">{item.q}</span>
               <motion.span
                 animate={{ rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary-light text-primary"
+                className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-accent/10 text-primary"
               >
                 <Plus size={15} strokeWidth={2.5} />
               </motion.span>

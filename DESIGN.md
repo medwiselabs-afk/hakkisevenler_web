@@ -1,17 +1,20 @@
 ---
 name: Hakkı Sevenler Uluslararası Yardım Derneği
-description: Teal-surface/red-CTA donation platform matched to a real reference site, evidence over stats.
+description: Modern, professional charity platform with teal-to-red gradient design combining trust, energy, and actionable engagement.
 colors:
-  ink: "#132A35"
+  ink: "#0F172A"
   bg: "#FFFFFF"
-  sand: "#F3F8F9"
-  line: "#E1E9EA"
-  primary: "#0D7377"
-  primary-dark: "#0A5C5F"
-  primary-light: "#DFF3F1"
-  accent: "#DC3B3E"
-  accent-dark: "#B32A2D"
-  accent-light: "#FBE1E1"
+  sand: "#F8FAFC"
+  line: "#E2E8F0"
+  primary: "#1B8FA6"
+  primary-dark: "#145A6F"
+  primary-light: "#E6F3F7"
+  accent: "#E74C3C"
+  accent-dark: "#C82E1D"
+  accent-light: "#FADBD8"
+  success: "#10B981"
+  success-dark: "#047857"
+  success-light: "#D1FAE5"
 typography:
   display:
     fontFamily: "Fraunces, Iowan Old Style, Palatino Linotype, serif"
@@ -30,92 +33,33 @@ spacing:
   container: "72rem"
 components:
   button-primary:
-    backgroundColor: "{colors.accent}"
+    backgroundColor: "linear-gradient(135deg, #1B8FA6 0%, #E74C3C 100%)"
     textColor: "#FFFFFF"
     rounded: "{rounded.pill}"
     padding: "12px 24px"
   button-primary-hover:
-    backgroundColor: "{colors.accent-dark}"
+    boxShadow: "0 0 30px -5px rgba(231, 76, 60, 0.4)"
   card:
     backgroundColor: "#FFFFFF"
-    rounded: "{rounded.card}"
 ---
 
-# Design System: Hakkı Sevenler Uluslararası Yardım Derneği
+# Design System: Hakkı Sevenler Uluslararası Yardım Derneği - Modern Professional Edition
 
 ## Overview
 
-**Creative North Star: "The Transparent Ledger"**
+**Creative North Star: "Trust Through Action"**
 
-A charity donation platform that reads like a well-run institution's public
-ledger: white pages, deep navy-teal ink for authority, teal as the
-structural surface color (top ticker, icon chips, links, active states),
-and one red reserved purely for the donation call to action. Nothing else
-competes with red; teal never fills a button.
-
-**The reference site is a live-edited Lovable preview, not a fixed
-artifact.** Across this redesign the same URL
-(`global-giving-heart.lovable.app`) has rendered at least three visibly
-different palettes when checked at different times (all-teal with no red;
-navy/red/rose; teal-surface with red CTAs). Each pass in this file's
-history matched the screenshot available at that moment in good faith —
-treat the *current* running site and DESIGN.md as authoritative, and expect
-that a future visit may show yet another state. If asked to re-match the
-reference again, get a fresh screenshot first rather than trusting this
-file's prior description of it.
-
-Confirmed rejection: aggregate impact statistics ("18 countries", "41,783+
-families") are not this association's real figures and must never be
-rendered as if they were — see PRODUCT.md Evidence on Hand. The stats
-section instead pulls live counts from the database.
+A contemporary charity donation platform featuring a professional teal-to-red gradient palette that conveys reliability, compassion, and purposeful action. The design balances modern aesthetics with deep user experience principles, using refined gradients, elegant shadows, and meaningful typography to create an inviting experience that encourages engagement and trust.
 
 **Key Characteristics:**
-- Teal (`primary`) is the structural color: top ticker background, links,
-  icon-chip icons, active nav pill, focus ring
-- Red (`accent`) is reserved *only* for the "Bağış Yap" call-to-action
-  button — everywhere it appears, including inside the teal top ticker
-- White as the working background; cool blue-gray (`sand`) only for
-  register changes (stats band, alternating sections)
-- Serif display (Fraunces) for headings, humanist sans (Inter) for body
-- Real photography, no icon-tile filler where a photo belongs
-- Numbers on screen are either live (from the database) or clearly marked
-  as placeholders — never invented
-
-## Colors
-
-Two-role strategy: teal is the surface/structural color, red is a single
-reserved action color used nowhere else.
-
-### Primary (teal)
-- **Deep Teal** (`#0D7377`): links, icon-chip icons, active nav pill,
-  focus ring, selection color, secondary/outline button borders+text.
-- **Deep Teal Dark** (`#0A5C5F`): hover/active state; also the top
-  ticker's solid background.
-- **Pale Teal** (`#DFF3F1`): icon-chip backgrounds, active nav-pill
-  background — always paired with `primary` text or icon, never a large
-  field on its own.
-
-### Accent (red — CTA only)
-- **Signal Red** (`#DC3B3E`): the "Bağış Yap" button fill, every time it
-  appears (header, ticker, hero, cards, forms). Nothing else is red.
-- **Signal Red Dark** (`#B32A2D`): CTA hover/active state.
-- **Pale Red** (`#FBE1E1`): reserved for a red-tinted chip if a future
-  component needs one; not currently used anywhere.
-
-### Neutral
-- **Deep Navy-Teal Ink** (`#132A35`): all body text and headings.
-- **White** (`#FFFFFF`): the default page background and card surface.
-- **Cool Blue-Gray** (`#F3F8F9`, token `sand`): the alternate section
-  background used to separate registers (stats band, page intros, gallery
-  bands).
-- **Hairline Blue-Gray** (`#E1E9EA`, token `line`): all borders — card
-  edges, dividers, input borders.
-
-### Named Rules
-**The Red-Is-CTA-Only Rule.** Red fills exactly one kind of element: the
-"Bağış Yap" action button, wherever it appears. It never becomes a link
-color, an icon-chip tint, a border, or a section background. Every other
-emphasis need is teal.
+- Deep Teal (`primary: #1B8FA6`) as the primary structural color: headers, navigation, focus states, and interactive elements
+- Signal Red (`accent: #E74C3C`) reserved for powerful calls-to-action and critical features
+- Modern gradient combinations (teal→red) for buttons, progress bars, and elevated components
+- Soft, professional shadows and blur effects for depth without distraction
+- Refined animation system with smooth transitions and purposeful motion
+- White as the primary background with subtle gradient overlays for visual sophistication
+- Success green for positive confirmations and completed states
+- Contemporary sans-serif and serif combination for maximum legibility and personality
 
 ## Typography
 

@@ -44,21 +44,24 @@ export default function SmsDonateSlider() {
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <Reveal className="mb-10 text-center">
-        <h2 className="font-display text-3xl text-ink sm:text-4xl">SMS ile Bağışla</h2>
-        <p className="mx-auto mt-3 max-w-lg text-sm text-ink/60">
-          Kod yaz, kısa numaraya gönder — kart bilgisi olmadan, faturana yansıyan tek satırlık bir
-          iyilik.
-        </p>
-      </Reveal>
+    <section className="relative overflow-hidden bg-gradient-to-br from-ink via-ink to-ink/95">
+      <div aria-hidden className="pointer-events-none absolute -left-16 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-accent/15 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
+        <Reveal className="mb-10 text-center">
+          <h2 className="font-display text-3xl text-white sm:text-4xl">SMS ile Bağışla</h2>
+          <p className="mx-auto mt-3 max-w-lg text-sm text-white/60">
+            Kod yaz, kısa numaraya gönder — kart bilgisi olmadan, faturana yansıyan tek satırlık bir
+            iyilik.
+          </p>
+        </Reveal>
 
-      <div className="relative">
-        <div
-          ref={trackRef}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {SMS_CAMPAIGNS.map((s) => (
+          <div className="relative">
+          <div
+            ref={trackRef}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {SMS_CAMPAIGNS.map((s) => (
             <Link
               href="/iletisim"
               data-card
@@ -105,9 +108,9 @@ export default function SmsDonateSlider() {
               </div>
             </Link>
           ))}
-        </div>
+          </div>
 
-        <div className="mt-6 hidden items-center justify-center gap-4 sm:flex">
+          <div className="mt-6 hidden items-center justify-center gap-4 sm:flex">
           <button
             type="button"
             onClick={() => scrollByCard(-1)}
@@ -124,13 +127,14 @@ export default function SmsDonateSlider() {
           >
             <ChevronRight size={18} />
           </button>
+          </div>
         </div>
-      </div>
 
-      <p className="mx-auto mt-4 max-w-xl text-center text-xs text-ink/40">
-        * SMS bağış hattı operatör başvuru sürecinde — kısa numara aktive edildiğinde
-        güncellenecektir. Şimdilik &quot;Detay&quot; bağlantısı iletişim sayfamıza yönlendirir.
-      </p>
+        <p className="mx-auto mt-4 max-w-xl text-center text-xs text-white/40">
+          * SMS bağış hattı operatör başvuru sürecinde — kısa numara aktive edildiğinde
+          güncellenecektir. Şimdilik &quot;Detay&quot; bağlantısı iletişim sayfamıza yönlendirir.
+        </p>
+      </div>
     </section>
   );
 }

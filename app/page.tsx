@@ -8,6 +8,7 @@ import QuickDonateSection from "@/components/QuickDonateSection";
 import ImpactStats from "@/components/ImpactStats";
 import ImpactGallery from "@/components/ImpactGallery";
 import CtaBanner from "@/components/CtaBanner";
+import SevenlerDavetTeaser from "@/components/SevenlerDavetTeaser";
 import SmsDonateSlider from "@/components/SmsDonateSlider";
 import CampaignCard from "@/components/CampaignCard";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -75,27 +76,29 @@ export default async function HomePage() {
         )}
       </section>
 
-      <section className="relative overflow-hidden border-y border-line bg-sand/50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-y border-line bg-gradient-to-br from-ink via-ink to-ink/95">
+        <div aria-hidden className="pointer-events-none absolute -left-16 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-accent/15 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
           <Reveal className="mb-12 text-center">
-            <h2 className="font-display text-3xl text-ink sm:text-4xl">Nasıl çalışır?</h2>
+            <h2 className="font-display text-3xl text-white sm:text-4xl">Nasıl çalışır?</h2>
           </Reveal>
 
           <StaggerGroup className="relative grid gap-10 sm:grid-cols-3 sm:gap-8">
             <div
               aria-hidden
-              className="absolute left-0 right-0 top-9 hidden border-t border-dashed border-primary/25 sm:block"
+              className="absolute left-0 right-0 top-9 hidden bg-gradient-to-r from-transparent via-white/15 to-transparent h-0.5 sm:block"
             />
             {STEPS.map(({ n, icon: Icon, t, d }) => (
               <StaggerItem key={n} className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
-                <span className="relative z-10 flex h-[72px] w-[72px] items-center justify-center rounded-full border border-primary/20 bg-white">
-                  <Icon size={26} className="text-primary" />
-                  <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary font-mono text-xs font-bold text-white">
+                <span className="relative z-10 flex h-[72px] w-[72px] items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+                  <Icon size={26} className="text-accent" />
+                  <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent font-mono text-xs font-bold text-white shadow-glow-primary">
                     {n}
                   </span>
                 </span>
-                <h3 className="mt-4 font-display text-xl text-ink">{t}</h3>
-                <p className="mt-1 text-sm text-ink/60">{d}</p>
+                <h3 className="mt-4 font-display text-xl text-white">{t}</h3>
+                <p className="mt-1 text-sm text-white/60">{d}</p>
               </StaggerItem>
             ))}
           </StaggerGroup>
@@ -110,6 +113,10 @@ export default async function HomePage() {
         </Reveal>
         <ImpactGallery />
       </section>
+
+      <div className="py-4">
+        <SevenlerDavetTeaser />
+      </div>
 
       <div className="py-4">
         <CtaBanner />

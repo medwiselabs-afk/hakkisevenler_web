@@ -35,7 +35,7 @@ export default function QuickDonateWidget({ campaigns }: { campaigns: CampaignCa
   }
 
   return (
-    <div className="w-full rounded-2xl bg-white p-6 shadow-soft sm:p-8">
+    <div className="w-full rounded-2xl bg-white p-6 shadow-soft sm:p-8 border border-line/50">
       <h2 className="text-center font-display text-xl text-ink sm:text-2xl">Hızlı Bağış</h2>
 
       <div className="mx-auto mt-5 max-w-xs">
@@ -67,10 +67,10 @@ export default function QuickDonateWidget({ campaigns }: { campaigns: CampaignCa
                 setAmount(a);
                 setShowCustom(false);
               }}
-              className={`focus-ring rounded-full border py-2.5 text-sm font-semibold transition-colors ${
+              className={`focus-ring rounded-full border py-2.5 text-sm font-semibold transition-all duration-200 ${
                 !showCustom && amount === a
-                  ? "border-primary bg-primary-light text-primary-dark"
-                  : "border-line text-ink/70 hover:border-primary"
+                  ? "border-primary bg-gradient-to-br from-primary/15 to-accent/15 text-primary font-bold"
+                  : "border-line text-ink/70 hover:border-primary hover:bg-primary/5"
               }`}
             >
               {a}₺
@@ -79,10 +79,10 @@ export default function QuickDonateWidget({ campaigns }: { campaigns: CampaignCa
           <button
             type="button"
             onClick={() => setShowCustom(true)}
-            className={`focus-ring rounded-full border py-2.5 text-sm font-semibold transition-colors ${
+            className={`focus-ring rounded-full border py-2.5 text-sm font-semibold transition-all duration-200 ${
               showCustom
-                ? "border-primary bg-primary-light text-primary-dark"
-                : "border-line text-ink/70 hover:border-primary"
+                ? "border-primary bg-gradient-to-br from-primary/15 to-accent/15 text-primary font-bold"
+                : "border-line text-ink/70 hover:border-primary hover:bg-primary/5"
             }`}
           >
             Diğer
@@ -105,7 +105,7 @@ export default function QuickDonateWidget({ campaigns }: { campaigns: CampaignCa
           type="button"
           onClick={handleDonate}
           disabled={finalAmount <= 0}
-          className="focus-ring group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-accent py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark disabled:pointer-events-none disabled:opacity-50"
+          className="focus-ring group mt-4 flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-cta py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-accent disabled:pointer-events-none disabled:opacity-50"
         >
           <HandCoins size={16} className="transition-transform duration-300 group-hover:scale-110" />
           Bağış Yap

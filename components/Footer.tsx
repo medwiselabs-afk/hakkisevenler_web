@@ -14,87 +14,103 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20 overflow-hidden border-t border-line bg-ink text-bg/80">
+    <footer className="relative mt-20 overflow-hidden border-t border-line bg-gradient-to-br from-ink/85 via-ink/80 to-ink/85 text-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"
       />
-      <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-primary/8 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-accent/8 blur-3xl" />
 
-      <Reveal className="relative mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-5">
-          <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2.5">
+      <Reveal className="relative mx-auto max-w-6xl px-4 py-16">
+        <div className="grid gap-12 md:grid-cols-12">
+          {/* Logo Section */}
+          <div className="md:col-span-4">
+            <Link href="/" className="focus-ring group inline-block transition-all hover:opacity-90">
               <Image
-                src="/logo-icon.png"
+                src="/hakki_sevenler_logo_transparent.png"
                 alt="Hakkı Sevenler Uluslararası Yardım Derneği"
-                width={36}
-                height={36}
-                className="h-9 w-9 flex-shrink-0"
+                width={300}
+                height={240}
+                className="h-auto w-full max-w-xs"
               />
-              <span className="font-display text-lg text-white">
-                Hakkı Sevenler <span className="text-bg/70">Uluslararası Yardım Derneği</span>
-              </span>
             </Link>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-bg/55">
-              Ankara Keçiören merkezli; hafızlık eğitimi, aşevi, mobil ikram ve yurt içi/yurt dışı
-              insani yardım alanlarında faaliyet gösteren bir yardım kuruluşudur. Her bağış, kanıt
-              ve kayıtla izlenebilir.
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/75">
+              Kurban, sadaka, eğitim ve insani yardım çalışmalarını şeffaf bir şekilde yürüten bir yardım kuruluşudur.
             </p>
-            <div className="mt-5 flex items-center gap-2">
+            <div className="mt-6 flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs text-white/70 backdrop-blur-sm">
+              <svg className="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1m-2 15l-5-5 1.41-1.41L10 12.17l7.59-7.59L19 6l-9 9z" />
+              </svg>
+              Bağışlar 3D Secure ile korunur
+            </div>
+            <div className="mt-6 flex items-center gap-3">
               {SOCIALS.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-bg/60 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary-light"
+                  className="focus-ring flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/60 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/25 hover:text-primary-light hover:shadow-lg backdrop-blur-sm"
                 >
-                  <Icon size={15} />
+                  <Icon size={16} />
                 </a>
               ))}
             </div>
           </div>
 
-          <div>
-            <p className="text-sm font-semibold text-white">Kurumsal</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li><Link href="/hakkimizda" className="transition-colors hover:text-primary-light">Hakkımızda</Link></li>
-              <li><Link href="/gundem" className="transition-colors hover:text-primary-light">Gündem</Link></li>
-              <li><Link href="/sss" className="transition-colors hover:text-primary-light">Sık Sorulan Sorular</Link></li>
-              <li><Link href="/kvkk" className="transition-colors hover:text-primary-light">KVKK Metni</Link></li>
-            </ul>
-          </div>
+          {/* Links Section */}
+          <div className="md:col-span-8">
+            <div className="grid gap-10 sm:grid-cols-3">
+              {/* Sayfalar */}
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-wider text-primary">Sayfalar</p>
+                <ul className="space-y-3 text-sm text-white/75">
+                  <li><Link href="/hakkimizda" className="transition-colors hover:text-primary-light">Hakkımızda</Link></li>
+                  <li><Link href="/faaliyetlerimiz" className="transition-colors hover:text-primary-light">Faaliyetlerimiz</Link></li>
+                  <li><Link href="/kurban" className="transition-colors hover:text-primary-light">Kurban Bağışı</Link></li>
+                  <li><Link href="/bagis" className="transition-colors hover:text-primary-light">Bağış Yap</Link></li>
+                </ul>
+              </div>
 
-          <div>
-            <p className="text-sm font-semibold text-white">Faaliyetler</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li><Link href="/faaliyetlerimiz" className="transition-colors hover:text-primary-light">Faaliyetlerimiz</Link></li>
-              <li><Link href="/kurban" className="transition-colors hover:text-primary-light">Kurban Bağışı</Link></li>
-              <li><Link href="/kampanyalar?kategori=SU_KUYUSU" className="transition-colors hover:text-primary-light">Afrika Su Kuyusu</Link></li>
-              <li><Link href="/kampanyalar?kategori=EGITIM" className="transition-colors hover:text-primary-light">Hafızlık Kur'an Kursu</Link></li>
-              <li><Link href="/sevenler-davet" className="transition-colors hover:text-primary-light">Sevenler Davet</Link></li>
-            </ul>
-          </div>
+              {/* İletişim */}
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-wider text-primary">İletişim</p>
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-start gap-3 text-white/75">
+                    <svg className="mt-0.5 h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                    </svg>
+                    <span>Merkez ofis adresi (güncellenecek)</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white/75">
+                    <Phone size={16} className="flex-shrink-0" />
+                    <span>+90 000 000 00 00</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white/75">
+                    <Mail size={16} className="flex-shrink-0" />
+                    <span>info@hakkisevenler.org.tr</span>
+                  </li>
+                </ul>
+              </div>
 
-          <div>
-            <p className="text-sm font-semibold text-white">Bültenimize katılın</p>
-            <p className="mt-3 text-sm text-bg/55">Kampanya ve şeffaflık raporlarından ilk siz haberdar olun.</p>
-            <div className="mt-3">
-              <NewsletterForm />
+              {/* Yasal */}
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-wider text-primary">Yasal</p>
+                <ul className="space-y-3 text-sm text-white/75">
+                  <li><Link href="/kvkk" className="transition-colors hover:text-primary-light">KVKK Metni</Link></li>
+                  <li><Link href="/sss" className="transition-colors hover:text-primary-light">Sık Sorulan Sorular</Link></li>
+                  <li><Link href="/gundem" className="transition-colors hover:text-primary-light">Gündem</Link></li>
+                  <li><Link href="/iletisim" className="transition-colors hover:text-primary-light">İletişim</Link></li>
+                </ul>
+              </div>
             </div>
-            <ul className="mt-5 space-y-2 text-sm text-bg/60">
-              <li className="flex items-center gap-2"><Phone size={14} className="text-primary-light" /> 0850 000 00 00</li>
-              <li className="flex items-center gap-2"><Mail size={14} className="text-primary-light" /> info@hakkisevenler.org.tr</li>
-            </ul>
           </div>
         </div>
       </Reveal>
 
-      <div className="relative border-t border-white/10 py-5 text-center text-xs text-bg/50">
-        <p className="mx-auto max-w-lg">
-          © {new Date().getFullYear()} Hakkı Sevenler Uluslararası Yardım Derneği — Bu proje bir
-          demo/başlangıç iskeletidir.
+      <div className="relative border-t border-white/10 py-6 text-center text-xs text-white/50">
+        <p>
+          © {new Date().getFullYear()} Hakkı Sevenler Derneği. Tüm hakları saklıdır.
         </p>
       </div>
     </footer>

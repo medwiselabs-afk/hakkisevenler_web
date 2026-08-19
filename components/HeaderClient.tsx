@@ -12,6 +12,7 @@ const NAV = [
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/faaliyetlerimiz", label: "Faaliyetlerimiz" },
   { href: "/kampanyalar", label: "Kampanyalar" },
+  { href: "/sevenler-davet", label: "Sevenler Davet" },
   { href: "/kurban", label: "Kurban" },
   { href: "/iletisim", label: "İletişim" },
 ];
@@ -43,61 +44,66 @@ export default function HeaderClient({ loggedIn }: { loggedIn: boolean }) {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "border-line bg-bg/90 py-2 shadow-[0_8px_30px_-15px_rgba(22,33,31,0.25)] backdrop-blur-md"
-          : "border-transparent bg-bg/70 py-4 backdrop-blur-sm"
+          ? "border-line/50 bg-bg/95 py-2 shadow-[0_10px_40px_-10px_rgba(91,95,255,0.2)] backdrop-blur-xl"
+          : "border-transparent bg-gradient-to-b from-bg via-bg to-bg/80 py-4 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="focus-ring group flex items-center gap-2.5 rounded">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 px-4">
+        <Link href="/" className="focus-ring flex items-center gap-3 rounded-xl">
           <Image
             src="/logo-icon.png"
             alt="Hakkı Sevenler Uluslararası Yardım Derneği"
-            width={44}
-            height={44}
+            width={56}
+            height={56}
             priority
-            className="h-10 w-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 sm:h-11 sm:w-11"
+            className="h-12 w-12 flex-shrink-0 sm:h-14 sm:w-14"
           />
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-xl font-semibold tracking-tight text-primary-dark">
-              Hakkı Sevenler <span className="text-primary">Derneği</span>
+            <span className="whitespace-nowrap font-display text-lg font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent sm:text-xl">
+              Hakkı Sevenler Derneği
             </span>
-            <span className="hidden text-xs text-ink/50 sm:block">
-              Yurt içinde ve yurt dışında iyilik
+            <span className="hidden whitespace-nowrap text-sm font-medium text-primary/70 sm:block">
+              Hayırlı İşlerde Ortağınız
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {NAV.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`focus-ring group relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
-                  active ? "bg-primary-light text-primary-dark" : "text-ink/75 hover:text-primary"
+                className={`focus-ring group relative whitespace-nowrap rounded-full px-2.5 py-2.5 text-sm font-medium transition-all duration-300 ${
+                  active 
+                    ? "bg-gradient-to-br from-primary/15 to-accent/15 text-primary font-semibold shadow-md" 
+                    : "text-ink/70 hover:text-primary hover:bg-primary/8"
                 }`}
               >
                 {item.label}
+                {active && (
+                  <span className="absolute inset-x-2 bottom-0.5 h-1 rounded-full bg-gradient-to-r from-primary via-accent to-primary" />
+                )}
               </Link>
             );
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Link
             href="/kampanyalar"
-            className="focus-ring group relative hidden items-center gap-1.5 overflow-hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-warm sm:inline-flex"
+            className="focus-ring group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2.5 text-base font-bold text-white shadow-[0_10px_30px_-5px_rgba(91,95,255,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_-5px_rgba(255,64,129,0.4)] sm:inline-flex"
           >
             <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
             <span className="relative">Bağış Yap</span>
-            <ArrowRight size={15} className="relative transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ArrowRight size={18} className="relative transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="focus-ring rounded-lg p-2 text-ink hover:bg-sand md:hidden"
+            className="focus-ring rounded-lg p-2 text-ink hover:bg-primary/10 hover:text-primary transition-colors xl:hidden"
             aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={open}
           >
@@ -113,7 +119,7 @@ export default function HeaderClient({ loggedIn }: { loggedIn: boolean }) {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-line bg-bg md:hidden"
+            className="overflow-hidden border-t border-line/50 bg-gradient-to-b from-bg to-bg/95 xl:hidden"
           >
             <div className="flex flex-col gap-1 px-4 py-4">
               {NAV.map((item, i) => (
@@ -125,22 +131,22 @@ export default function HeaderClient({ loggedIn }: { loggedIn: boolean }) {
                 >
                   <Link
                     href={item.href}
-                    className="focus-ring block rounded-lg px-3 py-2.5 text-base font-medium text-ink/85 hover:bg-sand hover:text-primary"
+                    className="focus-ring block rounded-lg px-3 py-3 text-base font-medium text-ink/85 transition-all hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary"
                   >
                     {item.label}
                   </Link>
                 </motion.div>
               ))}
-              <div className="mt-2 flex flex-col gap-2 border-t border-line pt-3">
+              <div className="mt-3 flex flex-col gap-2 border-t border-line/50 pt-4">
                 <Link
                   href={loggedIn ? "/hesabim" : "/giris"}
-                  className="focus-ring rounded-lg px-3 py-2.5 text-base font-medium text-ink/85 hover:bg-sand"
+                  className="focus-ring rounded-lg px-3 py-3 text-base font-medium text-ink/85 transition-all hover:bg-primary/10 hover:text-primary"
                 >
                   {loggedIn ? "Hesabım" : "Giriş / Üye"}
                 </Link>
                 <Link
                   href="/kampanyalar"
-                  className="focus-ring rounded-full bg-accent px-5 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-accent-dark"
+                  className="focus-ring rounded-full bg-gradient-to-r from-primary to-accent px-5 py-3 text-center text-base font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_15px_35px_-5px_rgba(255,64,129,0.4)]"
                 >
                   Bağış Yap
                 </Link>

@@ -13,6 +13,7 @@ export const users = sqliteTable("users", {
   passwordHash: text("password_hash").notNull(),
   fullName: text("full_name").notNull(),
   phone: text("phone"),
+  role: text("role", { enum: ["USER", "ADMIN"] }).notNull().default("USER"),
   kvkkConsent: integer("kvkk_consent", { mode: "boolean" }).notNull().default(false),
   createdAt: text("created_at")
     .notNull()

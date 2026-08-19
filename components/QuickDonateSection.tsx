@@ -6,32 +6,37 @@ import Reveal from "./motion/Reveal";
 
 export default function QuickDonateSection({ campaigns }: { campaigns: CampaignCardData[] }) {
   return (
-    <div className="relative z-10 mx-auto -mt-8 max-w-6xl px-4 pb-16 sm:-mt-12 sm:pb-20">
-      <Reveal>
-        <div className="flex flex-col gap-5 md:flex-row md:items-stretch">
-          <div className="md:w-3/5">
-            <QuickDonateWidget campaigns={campaigns} />
-          </div>
+    <div className="relative overflow-hidden bg-gradient-to-br from-ink via-ink to-ink/95">
+      <div aria-hidden className="pointer-events-none absolute -left-16 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-accent/15 blur-3xl" />
 
-          <div className="flex flex-col justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-soft sm:p-8 md:w-2/5">
-            <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
-              <Landmark size={22} />
-            </span>
-            <h2 className="font-display text-xl text-ink sm:text-2xl">Havale / EFT ile Bağış</h2>
-            <p className="text-sm text-ink/60">
-              Kart kullanmadan doğrudan IBAN üzerinden bağış yapmak isterseniz hesap
-              bilgilerimize göz atın.
-            </p>
-            <Link
-              href="/hesaplarimiz"
-              className="focus-ring group mx-auto inline-flex items-center gap-1.5 rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary-dark transition-colors hover:border-primary hover:bg-primary-light"
-            >
-              Hesapları Gör
-              <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-0 sm:pb-20">
+        <Reveal>
+          <div className="flex flex-col gap-5 md:flex-row md:items-stretch">
+            <div className="md:w-3/5">
+              <QuickDonateWidget campaigns={campaigns} />
+            </div>
+
+            <div className="flex flex-col justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-soft border border-line/50 sm:p-8 md:w-2/5">
+              <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-accent/10 text-primary">
+                <Landmark size={22} />
+              </span>
+              <h2 className="font-display text-xl text-ink sm:text-2xl">Havale / EFT ile Bağış</h2>
+              <p className="text-sm text-ink/60">
+                Kart kullanmadan doğrudan IBAN üzerinden bağış yapmak isterseniz hesap
+                bilgilerimize göz atın.
+              </p>
+              <Link
+                href="/hesaplarimiz"
+                className="focus-ring group mx-auto inline-flex items-center gap-1.5 rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary-dark transition-all hover:border-primary hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10"
+              >
+                Hesapları Gör
+                <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+              </Link>
+            </div>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </div>
   );
 }

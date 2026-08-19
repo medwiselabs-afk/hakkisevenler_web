@@ -16,7 +16,7 @@ export default function ProgressBar({
     <div>
       <div className="h-2.5 w-full overflow-hidden rounded-full bg-sand">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-primary to-primary-dark"
+          className="h-full rounded-full bg-gradient-to-r from-primary via-primary to-accent"
           initial={{ width: 0 }}
           whileInView={{ width: `${pct}%` }}
           viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function ProgressBar({
         />
       </div>
       <div className="mt-2 flex items-baseline justify-between font-mono text-xs">
-        <span className="font-semibold text-primary-dark">{formatTl(current)} toplandı</span>
+        <span className="font-semibold text-primary">{formatTl(current)} toplandı</span>
         <span className="text-ink/50">Hedef {formatTl(goal)}</span>
       </div>
     </div>

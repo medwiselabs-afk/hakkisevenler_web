@@ -109,10 +109,10 @@ export default function DonateForm({
                 setAmount(a);
                 setCustomAmount("");
               }}
-              className={`focus-ring rounded-lg border py-2 text-sm font-semibold transition-colors ${
+              className={`focus-ring rounded-lg border py-2 text-sm font-semibold transition-all duration-200 ${
                 !customAmount && amount === a
-                  ? "border-primary bg-primary-light text-primary-dark"
-                  : "border-line text-ink/70 hover:border-primary"
+                  ? "border-primary bg-gradient-to-br from-primary/15 to-accent/15 text-primary font-bold"
+                  : "border-line text-ink/70 hover:border-primary hover:bg-primary/5"
               }`}
             >
               {a}₺
@@ -176,7 +176,7 @@ export default function DonateForm({
       <button
         type="submit"
         disabled={loading}
-        className="focus-ring w-full rounded-full bg-accent py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-accent-dark disabled:opacity-60"
+        className="focus-ring w-full rounded-full bg-gradient-cta py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-accent disabled:opacity-60"
       >
         {loading ? "Hazırlanıyor…" : `${finalAmount || 0}₺ Bağışla`}
       </button>

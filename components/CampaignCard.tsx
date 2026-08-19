@@ -21,7 +21,7 @@ export default function CampaignCard({ c }: { c: CampaignCardData }) {
   return (
     <Link
       href={`/kampanyalar/${c.slug}`}
-      className="focus-ring group flex flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/30"
+      className="focus-ring group flex flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-glow-primary"
     >
       <div className="relative h-48 w-full overflow-hidden bg-sand">
         <Image
@@ -36,7 +36,7 @@ export default function CampaignCard({ c }: { c: CampaignCardData }) {
           {CATEGORY_LABEL[c.category] ?? c.category}
         </span>
         {c.isShareBased && c.totalShares ? (
-          <span className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-ink/70 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
+          <span className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-gradient-to-r from-primary/80 to-accent/80 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
             <Users size={11} />
             {c.takenShares}/{c.totalShares} hisse
           </span>

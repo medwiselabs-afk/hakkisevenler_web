@@ -1,6 +1,9 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
+import { eq } from "drizzle-orm";
 import bcrypt from "bcryptjs";
+import { db } from "@/lib/db";
+import { users } from "@/db/schema";
 
 const SESSION_COOKIE = "session_token";
 const secretKey = () => new TextEncoder().encode(process.env.AUTH_SECRET);
@@ -47,4 +50,14 @@ export async function getSession(): Promise<SessionPayload | null> {
 
 export function destroySession() {
   cookies().delete(SESSION_COOKIE);
+}
+
+export async function getCurrentAdmin() {
+  const session = await getSession();
+  if (!session) return null;
+
+  const user = await db.query.users.findFirst({ where: eq(users.id, session.userId) });
+  if (!user || user.role !== "ADMIN") return null;
+
+  return user;
 }

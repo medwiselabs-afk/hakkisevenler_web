@@ -16,19 +16,19 @@ export default function CtaBanner() {
               className="object-cover"
               sizes="(min-width: 1024px) 1100px, 100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-ink/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/30" />
           </div>
           <div className="absolute inset-0 flex max-w-md flex-col items-start justify-center gap-4 px-6 sm:max-w-lg sm:px-14">
             <h2 className="text-balance font-display text-3xl leading-tight text-white sm:text-4xl">
               Bugün başlayın: iyiliğin bir sonraki satırını birlikte yazalım.
             </h2>
-            <p className="text-sm text-white/70 sm:text-base">
+            <p className="text-sm text-white/75 sm:text-base">
               Tek seferlik ya da düzenli bağışınızla, ihtiyaç sahiplerine kanıtlanabilir bir umut
               gönderin.
             </p>
             <Link
               href="/kampanyalar"
-              className="focus-ring group mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-warm transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-dark"
+              className="focus-ring group mt-2 inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3 text-sm font-semibold text-white shadow-glow-accent transition-all duration-300 hover:-translate-y-0.5"
             >
               Bağış Yap
               <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />

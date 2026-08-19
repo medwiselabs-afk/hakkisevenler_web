@@ -57,7 +57,7 @@ export default function HesitationPopup() {
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-md rounded-3xl bg-white p-7 shadow-soft sm:p-8"
+            className="relative w-full max-w-md rounded-3xl bg-white p-7 shadow-soft border border-line/50 sm:p-8"
           >
             <button
               type="button"
@@ -68,7 +68,7 @@ export default function HesitationPopup() {
               <X size={16} />
             </button>
 
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-primary">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-accent/10 text-primary">
               <ShieldCheck size={24} />
             </span>
 
@@ -82,7 +82,7 @@ export default function HesitationPopup() {
               <Link
                 href="/#kanitlar"
                 onClick={close}
-                className="focus-ring flex items-center justify-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-semibold text-ink/80 transition-colors hover:border-primary hover:text-primary"
+                className="focus-ring flex items-center justify-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-semibold text-ink/80 transition-all hover:border-primary hover:bg-primary/5 hover:text-primary"
               >
                 <Images size={16} />
                 Kanıt Galerisi
@@ -92,7 +92,7 @@ export default function HesitationPopup() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={close}
-                className="focus-ring flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="focus-ring flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-warm"
               >
                 <WhatsAppIcon size={16} />
                 WhatsApp Destek Hattı

@@ -29,6 +29,7 @@ npm run db:generate    # schema değişikliğinden migration dosyası üretir (d
 npm run db:migrate      # migration'ları dev.db'ye uygular (tsx db/migrate.ts)
 npm run db:seed          # örnek veri ekler (db/seed.ts)
 npm run db:studio         # Drizzle Studio - veritabanını tarayıcıdan görüntüle
+npm run db:make-admin -- kullanici@ornek.com   # bir kullanıcıyı yönetici yapar
 ```
 
 ### Ortam Değişkenleri
@@ -39,6 +40,22 @@ npm run db:studio         # Drizzle Studio - veritabanını tarayıcıdan görü
 - `AUTH_SECRET` — JWT imzalama anahtarı (`openssl rand -base64 32`)
 - `NEXT_PUBLIC_BASE_URL` — iyzico callback URL'i için tam site adresi
 - `IYZICO_API_KEY`, `IYZICO_SECRET_KEY`, `IYZICO_BASE_URL` — sandbox hesabı ile alınır
+
+## Görsel Depolama
+
+Yönetim panelinden yüklenen kampanya fotoğrafları `public/uploads/kampanyalar/` klasörüne yazılır (`lib/uploads.ts`) ve `/uploads/...` yolundan doğrudan servis edilir — ayrı bir dosya sunma route'una gerek yoktur.
+
+**Önemli — Render'a deploy ederken:** Render'ın normal disk alanı her deploy'da sıfırlanır, yani bu klasöre yazılan fotoğraflar kaybolur. Bunu önlemek için Render servisinizde bir **persistent disk (volume)** ekleyip **mount path'ini tam olarak `public/uploads` olarak** ayarlayın (repo kökünden itibaren). Böylece `lib/uploads.ts` hiçbir değişiklik gerektirmeden kalıcı diske yazmaya devam eder.
+
+## Yönetim Paneli
+
+`/admin` altında; kampanya (fotoğraf yükleme dahil), bağış durumu ve kullanıcı yönetimi yapılır. Erişim için:
+
+1. Siteden normal şekilde üye olun (`/kayit`).
+2. `npm run db:make-admin -- e-posta@adresiniz.com` çalıştırarak o kullanıcıyı yönetici yapın.
+3. `/admin` adresinden, aynı hesapla giriş yaparak panele erişin.
+
+Yetki kontrolü `lib/auth.ts` içindeki `getCurrentAdmin()` ile yapılır; admin olmayan biri `/admin` altına girmeye çalışırsa `/giris` sayfasına yönlendirilir. Admin-only API route'ları `app/api/admin/**` altındadır.
 
 ## Proje Yapısı
 

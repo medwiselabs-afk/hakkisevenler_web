@@ -31,22 +31,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="tr" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="font-body flex min-h-screen flex-col overflow-x-hidden bg-bg text-ink">
         {/*
-          THESIS: Trust through proof, not scale claims — a restrained white/gray charity
-          site where evidence (photos, hisse counts, 3D Secure) replaces invented stats.
-          OWN-WORLD: white/navy-teal-ink neutrals, teal (#0D7377) as the structural surface
-          color (ticker, links, icon chips), red (#DC3B3E) reserved only for the "Bağış Yap"
-          CTA, Fraunces display + Inter body, rounded-2xl cards, soft shadows, no gradient chrome.
-          STORY: visitor sees the mission, trusts the payment/proof mechanics, donates to a
-          campaign or kurban hisse, and can later see delivery evidence.
-          FIRST VIEWPORT: dark-teal top ticker, campaign slider hero, quick-donate widget below.
-          FORM: brief-pinned redesign of https://global-giving-heart.lovable.app/, applied
-          as a token/section reskin over the existing Next.js structure (no concept roll —
-          direction was pinned by the user, see PRODUCT.md Brand Commitments). The reference is
-          a live-edited Lovable preview and has changed palette between checks — see DESIGN.md
-          Overview for the instability note; re-verify against a fresh screenshot before trusting
-          this comment's hex values again.
-          FINISH: unreviewed and undocumented is unfinished; this build ends with the finish
-          review, the verdict, and DESIGN.md.
+          THESIS: Professional, trustworthy charity platform using teal-to-red gradients
+          for maximum credibility and actionable engagement.
+          
+          DESIGN: White primary background with gradient overlay accents, deep teal (#1B8FA6) 
+          as the structural color for headers/navigation/focus states, signal red (#E74C3C) 
+          for powerful CTAs, soft shadows and refined gradients for depth, contemporary 
+          Fraunces serif + Inter sans-serif typography, 2xl rounded cards with subtle borders.
+          
+          STORY: Visitor is immediately engaged by professional, trustworthy design; navigates 
+          campaigns with confidence; makes donations through secure, elegant forms; tracks 
+          impact with beautiful visualizations.
+          
+          FIRST VIEWPORT: Gradient teal top ticker with religious calendar items, hero campaign 
+          slider with engaging imagery, quick-donate widget with smart selection.
+          
+          PALETTE: Primary teal (#1B8FA6 → #145A6F), accent red (#E74C3C), success green (#10B981), 
+          professional neutrals (0F172A ink, F8FAFC sand, E2E8F0 line).
         */}
         <Header />
         <main className="flex-1">{children}</main>

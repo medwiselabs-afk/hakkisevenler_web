@@ -5,19 +5,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#132A35",
+        ink: "#0F172A",
         bg: "#FFFFFF",
-        sand: "#F3F8F9",
-        line: "#E1E9EA",
+        sand: "#F8FAFC",
+        line: "#E2E8F0",
         primary: {
-          DEFAULT: "#0D7377",
-          dark: "#0A5C5F",
-          light: "#DFF3F1",
+          DEFAULT: "#1B8FA6",
+          dark: "#145A6F",
+          light: "#E6F3F7",
         },
         accent: {
-          DEFAULT: "#DC3B3E",
-          dark: "#B32A2D",
-          light: "#FBE1E1",
+          DEFAULT: "#E74C3C",
+          dark: "#C82E1D",
+          light: "#FADBD8",
+        },
+        success: {
+          DEFAULT: "#10B981",
+          dark: "#047857",
+          light: "#D1FAE5",
         },
       },
       fontFamily: {
@@ -34,12 +39,16 @@ const config: Config = {
       },
       backgroundImage: {
         "ledger-lines":
-          "repeating-linear-gradient(to bottom, transparent, transparent 39px, rgba(19,42,53,0.08) 40px)",
+          "repeating-linear-gradient(to bottom, transparent, transparent 39px, rgba(15,23,42,0.08) 40px)",
         "radial-fade": "radial-gradient(circle at center, black, transparent 75%)",
+        "gradient-cta": "linear-gradient(135deg, #1B8FA6 0%, #E74C3C 100%)",
+        "gradient-subtle": "linear-gradient(135deg, rgba(27,143,166,0.1) 0%, rgba(231,76,60,0.1) 100%)",
       },
       boxShadow: {
-        soft: "0 20px 60px -20px rgba(19, 42, 53, 0.2)",
-        warm: "0 20px 50px -18px rgba(220, 59, 62, 0.35)",
+        soft: "0 20px 60px -20px rgba(15, 23, 42, 0.15)",
+        warm: "0 20px 50px -18px rgba(231, 76, 60, 0.25)",
+        "glow-primary": "0 0 30px -5px rgba(27, 143, 166, 0.4)",
+        "glow-accent": "0 0 30px -5px rgba(231, 76, 60, 0.4)",
       },
       keyframes: {
         blob: {
@@ -67,6 +76,18 @@ const config: Config = {
           "0%": { transform: "scale(0.9)", opacity: "0.6" },
           "80%, 100%": { transform: "scale(1.6)", opacity: "0" },
         },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+        "slide-up": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "scale-in": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         blob: "blob 12s infinite ease-in-out",
@@ -76,6 +97,9 @@ const config: Config = {
         marquee: "marquee 28s linear infinite",
         shimmer: "shimmer 2.5s linear infinite",
         "pulse-ring": "pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "slide-up": "slide-up 0.5s ease-out forwards",
+        "scale-in": "scale-in 0.3s ease-out forwards",
       },
     },
   },

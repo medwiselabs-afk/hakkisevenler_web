@@ -8,7 +8,11 @@ html {
 
 body {
   background-color: #ffffff;
-  color: #132a35;
+  color: #0f172a;
+  background-image: 
+    radial-gradient(at 20% 50%, rgba(91, 95, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(255, 64, 129, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26,12 +30,12 @@ body {
   outline: none;
 }
 .focus-ring:focus-visible {
-  outline: 2px solid #0d7377;
+  outline: 2px solid #5b5fff;
   outline-offset: 2px;
 }
 
 ::selection {
-  background-color: #0d7377;
+  background: linear-gradient(135deg, #5b5fff 0%, #ff4081 100%);
   color: #ffffff;
 }
 
@@ -39,6 +43,25 @@ body {
   text-wrap: balance;
 }
 
+/* Modern glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Modern gradient button utility */
+.btn-gradient {
+  background: linear-gradient(135deg, #5B5FFF 0%, #FF4081 100%);
+  background-size: 200% 200%;
+  transition: background-position 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background-position: 200% 0%;
+}
+
+/* Noise overlay with modern effect */
 .noise-overlay {
   position: relative;
 }
@@ -47,29 +70,126 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.02;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .shimmer-text {
-  background: linear-gradient(90deg, #132a35 0%, #0d7377 25%, #132a35 50%, #0d7377 75%, #132a35 100%);
+  background: linear-gradient(90deg, #0f172a 0%, #5b5fff 25%, #0f172a 50%, #5b5fff 75%, #0f172a 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
+/* Modern scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
   background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e1e9ea;
+  background: linear-gradient(180deg, #5b5fff 0%, #ff4081 100%);
   border-radius: 999px;
+  transition: background 0.3s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0d7377;
+  background: linear-gradient(180deg, #4338ca 0%, #d91e63 100%);
+}
+
+/* Card elevation effect */
+.card-elevated {
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08),
+              0 8px 24px rgba(91, 95, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-elevated:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12),
+              0 16px 32px rgba(91, 95, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Gradient text animation */
+@keyframes gradient-text-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #5B5FFF, #FF4081, #5B5FFF);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-flow 3s ease infinite;
+}
+
+/* Input field modern styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  @apply transition-all duration-200;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(91, 95, 255, 0.1);
+  border-color: #5b5fff;
+}
+
+/* Modern badge styles */
+.badge-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 px-3 py-1 text-sm font-medium text-primary;
+  border: 1px solid rgba(91, 95, 255, 0.2);
+}
+
+.badge-accent {
+  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent/10 to-primary/10 px-3 py-1 text-sm font-medium text-accent;
+  border: 1px solid rgba(255, 64, 129, 0.2);
+}
+
+/* Loading skeleton animation */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: calc(200% + 100px) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f8fafc 25%, #e2e8f0 50%, #f8fafc 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 2s infinite;
+}
+
+/* Smooth page transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
 }
